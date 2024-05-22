@@ -21,6 +21,8 @@ int main(int argc, char *argv[])
     }
 
     sock = socket(PF_INET, SOCK_STREAM, 0);
+    // int tcp_socket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP); // Ipv4协议族中面向连接的套接字
+    // int udp_socket = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);  // Ipv4协议族中面向消息的套接字
     if (sock == -1)
         error_handling("socket() error!");
 
